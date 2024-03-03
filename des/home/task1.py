@@ -5,10 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        for index_first_fig in range(len(nums)):
-            for index_second_fig in range(index_first_fig + 1, len(nums)):
-                if nums[index_first_fig] + nums[index_second_fig] == target:
-                    return [index_first_fig, index_second_fig]
+        for index_first_fig, first_fig in enumerate(nums):
+            for index_second_fig, second_fig in enumerate(nums[index_first_fig + 1:]):
+                if first_fig + second_fig == target:
+                    return [index_first_fig, index_first_fig + index_second_fig + 1]
 
 
 nums = [2, 7, 11, 15]
