@@ -7,6 +7,8 @@ class Solution(object):
         substring = ''
         result_substring = ''
         last_symbol = ''
+        if len(s) == 0:
+            return 0
         for i in s:
             if substring == '':
                 substring = i
