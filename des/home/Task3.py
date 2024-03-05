@@ -21,14 +21,18 @@ class Solution(object):
             elif i != substring[-1]:
                 substring += i
             last_symbol = i
+        if len(substring) > len(result_substring):
+            result_substring = substring
         return len(result_substring)
 
 
 s = "abcabcbb"
-s1 = "bbbbb"
+s1 = "dvdf"
 s2 = "pwwkew"
+s3 = ' '
 
 sol = Solution()
-assert sol.lengthOfLongestSubstring(s) == 3
-assert sol.lengthOfLongestSubstring(s1) == 1
-assert sol.lengthOfLongestSubstring(s2) == 3
+# assert sol.lengthOfLongestSubstring(s) == 3
+assert sol.lengthOfLongestSubstring(s1) == 3
+# assert sol.lengthOfLongestSubstring(s2) == 3
+# assert sol.lengthOfLongestSubstring(s3) == 1
